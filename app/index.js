@@ -27,7 +27,7 @@ export default function Login(){
     }
 
     try {
-      const response = await api.get("/validar-login", {
+      const response = await api.get("/usuario", {
         params:{
           usuario: usuario,
           senha: senha
@@ -44,6 +44,9 @@ export default function Login(){
     } catch (error) {
       alert("Erro no servidor!");
       console.error("Não foi possível conectar, tente novamente mais tarde!");
+      // quando eu quiser saber o código do erro 
+      // console.error("Erro na requisição:", error.message, error.response?.data);
+;
     }
   }
 
@@ -82,8 +85,7 @@ export default function Login(){
       />
 
       {/* área de botões */}
-      {/*onPress={validarLogin}, colocar pra redirecionar apos validar*/}
-      <TouchableOpacity style={styles.botaoLogin} onPress={telaHome}>
+      <TouchableOpacity style={styles.botaoLogin} onPress={validarLogin}>
           <Text style={styles.textoLogin}>Login</Text>
       </TouchableOpacity>
 

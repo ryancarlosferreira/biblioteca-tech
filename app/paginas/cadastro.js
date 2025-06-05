@@ -28,7 +28,7 @@ const telaLogin= () => {
     }
 
     try {
-      const response = await api.post('/cadastro-usuario', {
+      const response = await api.post('/usuario', {
         usuario,
         senha
       });
@@ -72,8 +72,8 @@ const telaLogin= () => {
         onChangeText={setConfirmarSenha}
         value={confirmarSenha}
       />
-      {/*handleCadastro, colocar pra redirecionar apos validar*/}
-      <TouchableOpacity style={styles.botao} onPress={telaLogin}>
+      
+      <TouchableOpacity style={styles.botao} onPress={handleCadastro}>
         <Text style={styles.botaoTexto}>Cadastrar</Text>
       </TouchableOpacity>
     </View>
