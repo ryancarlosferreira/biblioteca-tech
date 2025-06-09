@@ -48,7 +48,7 @@ const telaLogin= () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo}>Formulário de Cadastro</Text>
+      <Text style={styles.titulo}>Cadastre-se</Text>
 
       <TextInput
         style={styles.input}

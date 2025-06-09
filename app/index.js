@@ -62,8 +62,6 @@ export default function Login(){
   //tela de login tá toda nessa view
   return (
     <View style={styles.container}>
-      
-
       <Image
         source={require("../src/assets/e-book.png")}
         style={styles.logo}
